@@ -1,0 +1,15 @@
+{{#if resume.skills.length}}
+  <section>
+    <span class="section-name">Skills</span>
+    {{#each resume.skills}}
+      <div class='skills-group'>
+        <span class='name'>{{name}}:</span>
+        <span class='keywords'>
+          {{#each keywords}}
+            {{.}}{{#unless @last}}, {{/unless}}
+          {{/each}}
+        </span>
+      </div>
+    {{/each}}
+  </section>
+{{/if}}

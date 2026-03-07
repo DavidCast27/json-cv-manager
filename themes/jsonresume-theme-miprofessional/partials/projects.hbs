@@ -1,0 +1,27 @@
+{{#if resume.projects.length}}
+  <section>
+    <span class="section-name">Projects</span>
+    {{#each resume.projects}}
+      <div class='project-item'>
+        <div class='project-header'>
+          <span class='name'>
+            {{#if url}}<a href="{{url}}">{{name}}</a>{{else}}{{name}}{{/if}}
+          </span>
+          {{#if entity}}
+            <span class='entity'>{{entity}}</span>
+          {{/if}}
+        </div>
+        {{#if description}}
+          <div class='description'>{{description}}</div>
+        {{/if}}
+        {{#if highlights.length}}
+          <ul>
+            {{#each highlights}}
+              <li>{{.}}</li>
+            {{/each}}
+          </ul>
+        {{/if}}
+      </div>
+    {{/each}}
+  </section>
+{{/if}}

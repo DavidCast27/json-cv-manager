@@ -1,0 +1,168 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "David Castrillón Gonzales",
+    "label": "Senior Full-Stack Developer (React, TypeScript, Node.js, Go)",
+    "email": "david.cast27@gmail.com",
+    "phone": "+57 3003467341",
+    "url": "https://castri.dev",
+    "summary": "Senior Full-Stack Developer specializing in React and TypeScript with backend experience in Node.js and Go. Experienced in micro-frontend architecture, SSR applications, REST API development, and automated testing. Strong product mindset with proven ownership building internal platforms (backoffice, reporting) and improving financial reconciliation workflows. Uses AI-assisted engineering workflows to improve delivery speed and solution quality.",
+    "location": { "city": "Sabaneta", "countryCode": "CO" },
+    "profiles": [
+      { "network": "LinkedIn", "url": "https://www.linkedin.com/in/davidcastrillongonzales/" },
+      { "network": "Website", "url": "https://castri.dev" },
+      { "network": "GitHub", "url": "https://github.com/DavidCast27" }
+    ]
+  },
+  "work": [
+    {
+      "name": "Yuno",
+      "position": "Senior Full-Stack Developer",
+      "startDate": "2024-10-01",
+      "location": "Colombia",
+      "summary": "Full-stack development across reconciliation and data products using React, TypeScript, React Query, Vite microfrontends, and Node.js. Keywords: React, TypeScript, Node.js, REST APIs, Microfrontends, Vite, React Query, SSR, System Design, Backoffice, Reporting, Scheduled Emails, Fintech, AI-assisted development.",
+      "highlights": [
+        "Tech stack: React, TypeScript, React Query, Vite (microfrontends), Node.js, React Router v7 (Remix-based SSR), Tailwind CSS, ShadCN UI, Zustand, Vitest.",
+        "Improved the reconciliation product through multiple workflow enhancements using React, TypeScript, React Query, and Vite in a micro-frontend architecture.",
+        "Designed and implemented a user-configurable alerting feature for reconciliation events (e.g., missing settlements / missing liquidations).",
+        "Contributing to the reconciliation product redesign, focusing on UX improvements and maintainable frontend architecture.",
+        "Built the backend for a reporting product enabling report template creation and scheduled email delivery; owned most of the backend implementation (Node.js, REST APIs).",
+        "Designed and scaffolded a company-wide Backoffice SSR application; established architecture and initial scaffolding adopted by multiple teams.",
+        "Applied AI-assisted development workflows across design, implementation, debugging, and documentation to improve engineering productivity."
+      ]
+    },
+    {
+      "name": "Conekta",
+      "position": "Senior Frontend Developer",
+      "startDate": "2021-08-01",
+      "endDate": "2024-09-01",
+      "location": "Medellín, Colombia",
+      "summary": "Back-office product development using React, TypeScript, Chakra UI, Material UI, with full-stack collaboration in Go and Node.js. Keywords: React, TypeScript, Chakra UI, Material UI, Go, Node.js, REST APIs, Backoffice, Component Library, Frontend Architecture.",
+      "highlights": [
+        "Tech stack: React, TypeScript, Chakra UI, Material UI, Go, Node.js, REST APIs.",
+        "Maintained and evolved the back-office application using React and TypeScript.",
+        "Delivered new product functionality and improved operational workflows.",
+        "Collaborated with backend teams using Go and Node.js; integrated REST APIs end-to-end.",
+        "Contributed to UI consistency and component patterns using Chakra UI and Material UI."
+      ]
+    },
+    {
+      "name": "Mercado Libre",
+      "position": "Senior Frontend Developer",
+      "startDate": "2021-03-01",
+      "endDate": "2021-08-01",
+      "location": "Medellín, Colombia",
+      "summary": "Frontend development for large-scale products using React and TypeScript. Keywords: React, TypeScript, JavaScript, HTML, CSS, Migration, Agile, Large-scale applications.",
+      "highlights": [
+        "Tech stack: React, TypeScript, JavaScript, HTML, CSS.",
+        "Contributed to the migration of an insurance application, delivering features using React and TypeScript.",
+        "Worked in distributed agile teams and large-scale codebases."
+      ]
+    },
+    {
+      "name": "Bancolombia",
+      "position": "Software Engineer (QA Automation)",
+      "startDate": "2018-10-01",
+      "endDate": "2021-03-01",
+      "location": "Medellín, Colombia",
+      "summary": "Test automation for web, mobile, and services using Selenium, Appium, Rest Assured, Cucumber, and Java (AS400). Keywords: Selenium, Appium, Rest Assured, Cucumber, Java, AS400, Test Automation, QA Strategy, Leadership.",
+      "highlights": [
+        "Tech stack: Selenium, Appium, Rest Assured, Cucumber, Java, AS400.",
+        "Led testing teams and defined test automation strategies.",
+        "Built automated tests for web, mobile, and APIs using Selenium, Appium, and Rest Assured.",
+        "Created automated batch testing processes using AS400 libraries in Java."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Portfolio",
+      "entity": "Personal",
+      "highlights": [
+        "Built a personal portfolio to explore Astro and Tailwind CSS.",
+        "Focused on modern UI development and performance-friendly static rendering."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "keywords": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React Query",
+        "Vite",
+        "Microfrontends",
+        "SSR",
+        "React Router v7",
+        "Tailwind CSS",
+        "ShadCN UI",
+        "Chakra UI",
+        "Material UI"
+      ]
+    },
+    {
+      "name": "Backend",
+      "keywords": [
+        "Node.js",
+        "Go",
+        "Java",
+        "REST APIs",
+        "Backend Architecture"
+      ]
+    },
+    {
+      "name": "State Management",
+      "keywords": [
+        "Zustand"
+      ]
+    },
+    {
+      "name": "Testing",
+      "keywords": [
+        "Vitest",
+        "Selenium",
+        "Appium",
+        "Rest Assured",
+        "Cucumber",
+        "Test Automation"
+      ]
+    },
+    {
+      "name": "Practices",
+      "keywords": [
+        "Frontend Architecture",
+        "Micro-Frontend Architecture",
+        "Design Systems",
+        "Component Libraries",
+        "Agile",
+        "AI-Assisted Development"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Institucion Universitaria de Envigado",
+      "area": "Systems Engineering",
+      "studyType": "Bachelor's Degree",
+      "startDate": "2013-10-01",
+      "endDate": "2017-12-01",
+      "location": "Envigado, Colombia"
+    },
+    {
+      "institution": "Institucion Universitaria de Envigado",
+      "area": "Project Management",
+      "studyType": "Diploma",
+      "startDate": "2017-06-01",
+      "endDate": "2017-07-01",
+      "location": "Envigado, Colombia"
+    }
+  ],
+  "languages": [
+    { "language": "Spanish", "fluency": "Native" },
+    { "language": "English", "fluency": "Professional Working Proficiency" }
+  ]
+}

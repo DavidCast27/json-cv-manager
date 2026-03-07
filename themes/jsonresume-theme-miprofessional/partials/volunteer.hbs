@@ -1,0 +1,42 @@
+{{#if resume.volunteer.length}}
+  <div id='volunteer' class='section-block'>
+    <div class='section-intro'>
+      <div class='section-name'>
+        <span>VOLUNTEERING</span>
+      </div>
+      <div class='section-intro-line'></div>
+    </div>
+    <div class='section-content'>
+      {{#each resume.volunteer}}
+        <div class='block-header'>
+          <span class='organization'>{{organization}}</span>
+          <span class='title'>{{position}}</span>
+          {{#if startDate}}
+            <span class='date'>
+              {{#if (IF_DATES_HAVE_SAME_MONTH_AND_YEAR startDate endDate)}}
+                {{MONTH_YEAR startDate}}
+              {{else}}
+                {{#if startDate}}{{MONTH_YEAR startDate}}{{/if}} &mdash;
+                {{#if endDate}}{{MONTH_YEAR endDate}}{{else}}Present{{/if}}
+              {{/if}}
+            </span>
+          {{/if}}
+        </div>
+        {{#if website}}
+          <div class='website'><a href='{{website}}'>{{website}}</a></div>
+        {{/if}}
+        {{#if highlights.length}}
+          <ul class='highlights'>
+            {{#each highlights}}
+              <li>{{.}}</li>
+            {{/each}}
+          </ul>
+        {{/if}}
+        {{#unless @last}}
+          <div class='separator'></div>
+        {{/unless}}
+      {{/each}}
+    </div>
+  </div>
+  <div class='section-line'></div>
+{{/if}}

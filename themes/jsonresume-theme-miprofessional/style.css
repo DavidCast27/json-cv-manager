@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 11px;
+  line-height: 1.3;
+  color: #000;
+  background: #fff;
+}
+
+#wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+.basics {
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.basics .name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.basics .label {
+  font-size: 12px;
+  color: #333;
+  margin-top: 3px;
+}
+
+.basics .contact-block {
+  margin-top: 8px;
+  font-size: 10px;
+}
+
+.basics .contact-block > div {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.basics .contact-block a {
+  color: #000;
+  text-decoration: none;
+}
+
+#basics-center-content {
+  text-align: center;
+}
+
+#basics-right-content {
+  text-align: center;
+  font-size: 10px;
+}
+
+#basics-left-content {
+  display: none;
+}
+
+.summary {
+  margin-bottom: 10px;
+}
+
+.summary p {
+  color: #000;
+}
+
+section {
+  margin-bottom: 12px;
+}
+
+.section-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ccc;
+  display: block;
+}
+
+.work-item {
+  margin-bottom: 8px;
+}
+
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.work-header .position {
+  font-size: 11px;
+  font-weight: 600;
+  color: #000;
+}
+
+.work-header .company {
+  font-size: 11px;
+  font-weight: 500;
+  color: #000;
+}
+
+.work-header .date {
+  font-size: 10px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.work-item .location {
+  font-size: 10px;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.work-item .summary {
+  margin-bottom: 3px;
+  color: #000;
+  font-size: 10px;
+}
+
+.work-item ul {
+  margin-left: 15px;
+  color: #000;
+}
+
+.work-item li {
+  margin-bottom: 1px;
+}
+
+.skills-group {
+  margin-bottom: 4px;
+}
+
+.skills-group .name {
+  font-weight: 600;
+  color: #000;
+}
+
+.skills-group .keywords {
+  color: #000;
+}
+
+.education-item {
+  margin-bottom: 6px;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.education-header .institution {
+  font-weight: 600;
+  color: #000;
+  font-size: 11px;
+}
+
+.education-header .date {
+  font-size: 10px;
+  color: #333;
+}
+
+.education-item .area {
+  color: #000;
+  font-size: 10px;
+}
+
+.education-item .location {
+  font-size: 10px;
+  color: #333;
+}
+
+.project-item {
+  margin-bottom: 6px;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.project-header .name {
+  font-weight: 600;
+  color: #000;
+  font-size: 11px;
+}
+
+.project-header .entity {
+  font-size: 10px;
+  color: #333;
+}
+
+.project-item .description {
+  color: #000;
+  margin-bottom: 3px;
+  font-size: 10px;
+}
+
+.project-item ul {
+  margin-left: 15px;
+  color: #000;
+}
+
+.language-item {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.language-item .language {
+  font-weight: 600;
+  color: #000;
+}
+
+.language-item .fluency {
+  color: #333;
+}
+
+.profile-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.profile-item .network {
+  font-weight: 600;
+  color: #000;
+}
+
+.profile-item .url a {
+  color: #000;
+  text-decoration: none;
+}
+
+.display-none {
+  display: none;
+}
+
+@media print {
+  body {
+    font-size: 10px;
+  }
+  #wrapper {
+    padding: 15px 20px;
+  }
+  .work-item, .education-item, .project-item {
+    page-break-inside: avoid;
+  }
+}

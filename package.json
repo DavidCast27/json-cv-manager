@@ -1,0 +1,26 @@
+{
+  "name": "json-cv-manager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "export": "node scripts/export.js",
+    "export:pdf": "node scripts/export.js --type=pdf",
+    "export:html": "node scripts/export.js --type=html",
+    "validate": "node scripts/validate.js",
+    "validate:all": "node scripts/validate-all.js"
+  },
+  "keywords": [
+    "jsonresume",
+    "cv",
+    "resume"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "CV versionado usando JSON Resume",
+  "devDependencies": {
+    "resume-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "jsonresume-theme-miprofessional": "file:themes/jsonresume-theme-miprofessional"
+  }
+}

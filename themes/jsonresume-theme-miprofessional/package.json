@@ -1,0 +1,16 @@
+{
+  "name": "jsonresume-theme-miprofessional",
+  "private": false,
+  "version": "1.0.0",
+  "description": "A professional JSON Resume theme",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "partials/*.hbs",
+    "resume.hbs",
+    "style.css"
+  ],
+  "dependencies": {
+    "handlebars": "^4.7.6"
+  }
+}

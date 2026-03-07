@@ -1,0 +1,53 @@
+{{#resume.basics}}
+  <div class='basics'>
+    <div id='basics-left-content'>
+      <div class='display-none'>
+        {{#location}}
+          <span class='address'>{{address}} {{city}} {{region}} {{postalCode}}</span>
+        {{/location}}
+        {{#if phone}}
+          <span class='phone'>
+            <a href="tel:{{phone}}">{{phone}}</a>
+          </span>
+        {{/if}}
+      </div>
+    </div>
+
+    <div id='basics-center-content'>
+      <span class='name'>{{name}}</span>
+      {{#if label}}
+        <div class='label'>{{label}}</div>
+      {{/if}}
+    </div>
+
+    <div id='basics-right-content'>
+      <div class='contact-block'>
+        {{#if email}}
+          <div>
+            <a href="mailto:{{email}}">{{email}}</a>
+          </div>
+        {{/if}}
+        {{#if phone}}
+          <div>
+            <a href="tel:{{phone}}">{{phone}}</a>
+          </div>
+        {{/if}}
+        {{#if url}}
+          <div>
+            <a href='{{url}}'>{{url}}</a>
+          </div>
+        {{/if}}
+        {{#location}}
+          <div>{{city}}, {{countryCode}}</div>
+        {{/location}}
+        {{#if profiles.length}}
+          {{#each profiles}}
+            {{#if (eq network "LinkedIn")}}
+              <div>{{network}}: {{url}}</div>
+            {{/if}}
+          {{/each}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+{{/resume.basics}}

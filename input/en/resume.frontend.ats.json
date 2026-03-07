@@ -1,0 +1,151 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "David Castrillón Gonzales",
+    "label": "Senior Frontend Engineer (React, TypeScript, SSR, Microfrontends)",
+    "email": "david.cast27@gmail.com",
+    "phone": "+57 3003467341",
+    "url": "https://castri.dev",
+    "summary": "Senior Frontend Engineer specialized in React and TypeScript with strong experience in frontend architecture, SSR, microfrontends, design systems, and automated testing. Built scalable UI platforms, reusable component patterns, and modern SSR applications (React Router v7 / Remix-based). Strong collaboration across product and backend teams; uses AI-assisted workflows to improve delivery and quality.",
+    "location": { "city": "Sabaneta", "countryCode": "CO" },
+    "profiles": [
+      { "network": "LinkedIn", "url": "https://www.linkedin.com/in/davidcastrillongonzales/" },
+      { "network": "Website", "url": "https://castri.dev" },
+      { "network": "GitHub", "url": "https://github.com/DavidCast27" }
+    ]
+  },
+  "work": [
+    {
+      "name": "Yuno",
+      "position": "Senior Frontend Engineer",
+      "startDate": "2024-10-01",
+      "location": "Colombia",
+      "summary": "Frontend architecture and product delivery using React, TypeScript, React Query, Vite microfrontends, and SSR. Keywords: React, TypeScript, React Query, Vite, Microfrontends, SSR, React Router v7, Tailwind CSS, ShadCN UI, Zustand, Vitest, Frontend Architecture, Design Systems, AI-assisted development.",
+      "highlights": [
+        "Tech stack: React, TypeScript, React Query, Vite (microfrontends), React Router v7 (Remix-based SSR), Tailwind CSS, ShadCN UI, Zustand, Vitest.",
+        "Delivered multiple improvements to the reconciliation product using React, TypeScript, React Query, and Vite microfrontends.",
+        "Built a user-configurable alerting feature for reconciliation workflows (missing settlements / missing liquidations).",
+        "Contributing to the product redesign with a focus on UX, maintainability, and frontend architecture.",
+        "Designed and scaffolded a Backoffice SSR application; architecture and scaffolding adopted by multiple teams.",
+        "Applied AI-assisted development workflows to speed up implementation and improve solution quality."
+      ]
+    },
+    {
+      "name": "Conekta",
+      "position": "Senior Frontend Developer",
+      "startDate": "2021-08-01",
+      "endDate": "2024-09-01",
+      "location": "Medellín, Colombia",
+      "summary": "React + TypeScript frontend development for back-office platforms using Chakra UI / Material UI. Keywords: React, TypeScript, Chakra UI, Material UI, Component Library, Design System, Frontend Architecture, REST APIs.",
+      "highlights": [
+        "Tech stack: React, TypeScript, Chakra UI, Material UI.",
+        "Maintained and improved a back-office application, shipping features with React and TypeScript.",
+        "Built and maintained reusable UI components and patterns using Chakra UI and Material UI.",
+        "Collaborated with backend services (Go / Node.js) integrating REST APIs into the UI."
+      ]
+    },
+    {
+      "name": "Mercado Libre",
+      "position": "Senior Frontend Developer",
+      "startDate": "2021-03-01",
+      "endDate": "2021-08-01",
+      "location": "Medellín, Colombia",
+      "summary": "React + TypeScript frontend development for large-scale applications. Keywords: React, TypeScript, JavaScript, Migration, Agile, Large-scale applications.",
+      "highlights": [
+        "Tech stack: React, TypeScript, JavaScript, HTML, CSS.",
+        "Contributed to the migration of an insurance platform, delivering features with React and TypeScript.",
+        "Worked within distributed agile teams on large codebases."
+      ]
+    },
+    {
+      "name": "Bancolombia",
+      "position": "Software Engineer (QA Automation)",
+      "startDate": "2018-10-01",
+      "endDate": "2021-03-01",
+      "location": "Medellín, Colombia",
+      "summary": "Quality engineering and automation for web, mobile, and services. Keywords: Selenium, Appium, Rest Assured, Cucumber, Java, AS400, QA Strategy, Test Automation.",
+      "highlights": [
+        "Tech stack: Selenium, Appium, Rest Assured, Cucumber, Java, AS400.",
+        "Led testing teams and defined automation strategies and quality standards.",
+        "Automated tests with Selenium, Appium, Rest Assured, and Cucumber.",
+        "Built batch testing automation using AS400 libraries in Java."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Portfolio",
+      "entity": "Personal",
+      "highlights": [
+        "Built a personal portfolio to explore Astro and Tailwind CSS."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "keywords": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "React Query",
+        "Vite",
+        "Microfrontends",
+        "SSR",
+        "React Router v7",
+        "Tailwind CSS",
+        "ShadCN UI",
+        "Chakra UI",
+        "Material UI"
+      ]
+    },
+    {
+      "name": "State & Testing",
+      "keywords": [
+        "Zustand",
+        "Vitest",
+        "Frontend Testing"
+      ]
+    },
+    {
+      "name": "Architecture",
+      "keywords": [
+        "Frontend Architecture",
+        "Design Systems",
+        "Component Libraries",
+        "Performance Optimization",
+        "Accessibility (a11y)"
+      ]
+    },
+    {
+      "name": "Practices",
+      "keywords": [
+        "Agile",
+        "Code Reviews",
+        "AI-Assisted Development"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Institucion Universitaria de Envigado",
+      "area": "Systems Engineering",
+      "studyType": "Bachelor's Degree",
+      "startDate": "2013-10-01",
+      "endDate": "2017-12-01",
+      "location": "Envigado, Colombia"
+    },
+    {
+      "institution": "Institucion Universitaria de Envigado",
+      "area": "Project Management",
+      "studyType": "Diploma",
+      "startDate": "2017-06-01",
+      "endDate": "2017-07-01",
+      "location": "Envigado, Colombia"
+    }
+  ],
+  "languages": [
+    { "language": "Spanish", "fluency": "Native" },
+    { "language": "English", "fluency": "Professional Working Proficiency" }
+  ]
+}
