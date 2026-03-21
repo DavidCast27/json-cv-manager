@@ -260,4 +260,7 @@ section {
   .work-item, .education-item, .project-item {
     page-break-inside: avoid;
   }
+  .hide-in-print {
+    display: none;
+  }
 }

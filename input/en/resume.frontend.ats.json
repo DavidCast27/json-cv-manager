@@ -6,7 +6,7 @@
     "email": "david.cast27@gmail.com",
     "phone": "+57 3003467341",
     "url": "https://castri.dev",
-    "summary": "Senior Frontend Engineer focused on React and TypeScript. Designs scalable frontend architecture (SSR and microfrontends), builds design systems and reusable components, and ships high‑quality UI with automated tests. Experienced with Remix/React Router v7 SSR. Collaborates closely with product and backend teams and uses AI‑assisted workflows to improve delivery speed and quality.",
+    "summary": "Senior Frontend Engineer specializing in frontend architecture with expertise in React and TypeScript. Designs scalable frontend architecture (SSR and microfrontends), builds design systems and reusable components, and ships high-quality UI with automated tests. Integrates with backend services (Node.js, Go) and uses AI-assisted workflows (code generation, debugging, design support) to improve delivery speed and quality.",
     "location": { "city": "Sabaneta", "countryCode": "CO" },
     "profiles": [
       { "network": "LinkedIn", "url": "https://www.linkedin.com/in/davidcastrillongonzales/" },
@@ -20,14 +20,15 @@
       "position": "Senior Frontend Engineer",
       "startDate": "2024-10-01",
       "location": "Colombia",
-      "summary": "Owns frontend architecture and product delivery using React, TypeScript, React Query, Vite microfrontends, and SSR with Remix/React Router v7.",
+      "summary": "Frontend architecture and product delivery for reconciliation and data products using React, TypeScript, React Query, Vite microfrontends, and SSR.",
       "highlights": [
         "Tech stack: React, TypeScript, React Query, Vite (microfrontends), Remix/React Router v7 (SSR), Tailwind CSS, ShadCN UI, Zustand, Vitest.",
-        "Improved reconciliation workflows and UI flows across the product using React, TypeScript, and React Query.",
-        "Shipped a user‑configurable alerting feature for missing settlements and liquidations.",
-        "Contributed to a product redesign focused on UX, maintainability, and frontend architecture.",
-        "Designed and scaffolded a Backoffice SSR application; the architecture and scaffolding were adopted by multiple teams.",
-        "Applied AI‑assisted development practices across design, implementation, and documentation to increase delivery quality and speed."
+        "Built a reconciliation microfrontend architecture using React, TypeScript, React Query, and Vite-based microfrontends (single-spa / Webpack).",
+        "Implemented configurable alerting for reconciliation events (e.g., missing settlements) to improve monitoring and operational visibility.",
+        "Delivered a reporting feature end-to-end, including frontend interfaces for report templates and scheduling.",
+        "Established the architecture for a company-wide Backoffice SSR platform using React, TypeScript, Tailwind CSS, and React Router v7; later adopted and extended by multiple teams.",
+        "Contributing to the reconciliation product redesign, focusing on UX improvements and maintainable frontend architecture.",
+        "Applied AI-assisted workflows (code generation, debugging, design support) to improve engineering productivity."
       ]
     },
     {
@@ -36,7 +37,7 @@
       "startDate": "2021-08-01",
       "endDate": "2024-09-01",
       "location": "Medellín, Colombia",
-      "summary": "React and TypeScript frontend development for back-office platforms with Chakra UI and Material UI.",
+      "summary": "Back-office product development using React, TypeScript, Chakra UI, and Material UI, collaborating with Go and Node.js backends.",
       "highlights": [
         "Tech stack: React, TypeScript, Chakra UI, Material UI, REST APIs.",
         "Maintained and improved a back‑office application, shipping features with React and TypeScript.",
@@ -50,7 +51,7 @@
       "startDate": "2021-03-01",
       "endDate": "2021-08-01",
       "location": "Medellín, Colombia",
-      "summary": "Frontend development for large‑scale applications using React and TypeScript.",
+      "summary": "Frontend development for large-scale products using React and TypeScript.",
       "highlights": [
         "Tech stack: React, TypeScript, JavaScript, HTML, CSS.",
         "Contributed to an insurance platform migration, delivering features with React and TypeScript.",
@@ -63,21 +64,12 @@
       "startDate": "2018-10-01",
       "endDate": "2021-03-01",
       "location": "Medellín, Colombia",
-      "summary": "Quality engineering and automation for web, mobile, and services.",
+      "summary": "Test automation for web, mobile, and services using Selenium, Appium, Rest Assured, Cucumber, and Java (AS400).",
       "highlights": [
         "Tech stack: Selenium, Appium, Rest Assured, Cucumber, Java, AS400.",
         "Led testing teams and defined automation strategies and quality standards.",
         "Automated tests for web, mobile, and APIs using Selenium, Appium, Rest Assured, and Cucumber.",
         "Built batch testing automation using AS400 libraries in Java."
-      ]
-    }
-  ],
-  "projects": [
-    {
-      "name": "Portfolio",
-      "entity": "Personal",
-      "highlights": [
-        "Built a personal portfolio site using Astro and Tailwind CSS."
       ]
     }
   ],
@@ -124,7 +116,9 @@
       "keywords": [
         "Agile",
         "Code Reviews",
-        "AI-Assisted Development"
+        "AI-Assisted Development",
+        "System Design",
+        "Data Modeling"
       ]
     },
     {
@@ -137,7 +131,7 @@
   ],
   "education": [
     {
-      "institution": "Institución Universitaria de Envigado",
+      "institution": "Institucion Universitaria de Envigado",
       "area": "Systems Engineering",
       "studyType": "Bachelor's Degree",
       "startDate": "2013-10-01",
@@ -145,7 +139,7 @@
       "location": "Envigado, Colombia"
     },
     {
-      "institution": "Institución Universitaria de Envigado",
+      "institution": "Institucion Universitaria de Envigado",
       "area": "Project Management",
       "studyType": "Diploma",
       "startDate": "2017-06-01",
