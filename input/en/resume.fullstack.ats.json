@@ -6,7 +6,7 @@
     "email": "david.cast27@gmail.com",
     "phone": "+57 3003467341",
     "url": "https://castri.dev",
-    "summary": "Senior Full-Stack Developer specializing in React and TypeScript with backend experience in Node.js and Go. Experienced in micro-frontend architecture, SSR applications, REST API development, and automated testing. Strong product mindset with proven ownership building internal platforms (backoffice, reporting) and improving financial reconciliation workflows. Uses AI-assisted engineering workflows to improve delivery speed and solution quality.",
+    "summary": "Senior Full‑Stack Developer specializing in React and TypeScript with backend experience in Node.js and Go. Builds microfrontend and SSR applications, REST APIs, and automated testing pipelines. Owns internal platforms (backoffice, reporting) and improves financial reconciliation workflows. Uses AI‑assisted workflows to increase delivery speed and solution quality.",
     "location": { "city": "Sabaneta", "countryCode": "CO" },
     "profiles": [
       { "network": "LinkedIn", "url": "https://www.linkedin.com/in/davidcastrillongonzales/" },
@@ -20,15 +20,15 @@
       "position": "Senior Full-Stack Developer",
       "startDate": "2024-10-01",
       "location": "Colombia",
-      "summary": "Full-stack development across reconciliation and data products using React, TypeScript, React Query, Vite microfrontends, and Node.js. Keywords: React, TypeScript, Node.js, REST APIs, Microfrontends, Vite, React Query, SSR, System Design, Backoffice, Reporting, Scheduled Emails, Fintech, AI-assisted development.",
+      "summary": "Full‑stack development across reconciliation and data products using React, TypeScript, React Query, Vite microfrontends, and Node.js.",
       "highlights": [
-        "Tech stack: React, TypeScript, React Query, Vite (microfrontends), Node.js, React Router v7 (Remix-based SSR), Tailwind CSS, ShadCN UI, Zustand, Vitest.",
-        "Improved the reconciliation product through multiple workflow enhancements using React, TypeScript, React Query, and Vite in a micro-frontend architecture.",
-        "Designed and implemented a user-configurable alerting feature for reconciliation events (e.g., missing settlements / missing liquidations).",
-        "Contributing to the reconciliation product redesign, focusing on UX improvements and maintainable frontend architecture.",
-        "Built the backend for a reporting product enabling report template creation and scheduled email delivery; owned most of the backend implementation (Node.js, REST APIs).",
-        "Designed and scaffolded a company-wide Backoffice SSR application; established architecture and initial scaffolding adopted by multiple teams.",
-        "Applied AI-assisted development workflows across design, implementation, debugging, and documentation to improve engineering productivity."
+        "Tech stack: React, TypeScript, React Query, Vite (microfrontends), Remix/React Router v7 (SSR), Node.js, Tailwind CSS, ShadCN UI, Zustand, Vitest.",
+        "Improved reconciliation workflows and UI flows using React, TypeScript, and React Query within a microfrontend architecture.",
+        "Designed and implemented a user‑configurable alerting feature for reconciliation events (e.g., missing settlements and liquidations).",
+        "Contributed to the product redesign, focusing on UX improvements and maintainable frontend architecture.",
+        "Built the backend for a reporting product enabling report template creation and scheduled email delivery (Node.js, REST APIs).",
+        "Designed and scaffolded a company‑wide Backoffice SSR application; the architecture and scaffolding were adopted by multiple teams.",
+        "Applied AI‑assisted development practices across design, implementation, debugging, and documentation to improve engineering productivity."
       ]
     },
     {
@@ -37,10 +37,10 @@
       "startDate": "2021-08-01",
       "endDate": "2024-09-01",
       "location": "Medellín, Colombia",
-      "summary": "Back-office product development using React, TypeScript, Chakra UI, Material UI, with full-stack collaboration in Go and Node.js. Keywords: React, TypeScript, Chakra UI, Material UI, Go, Node.js, REST APIs, Backoffice, Component Library, Frontend Architecture.",
+      "summary": "Back‑office product development using React, TypeScript, Chakra UI, and Material UI, collaborating with Go and Node.js backends.",
       "highlights": [
         "Tech stack: React, TypeScript, Chakra UI, Material UI, Go, Node.js, REST APIs.",
-        "Maintained and evolved the back-office application using React and TypeScript.",
+        "Maintained and evolved a back‑office application using React and TypeScript.",
         "Delivered new product functionality and improved operational workflows.",
         "Collaborated with backend teams using Go and Node.js; integrated REST APIs end-to-end.",
         "Contributed to UI consistency and component patterns using Chakra UI and Material UI."
@@ -52,10 +52,10 @@
       "startDate": "2021-03-01",
       "endDate": "2021-08-01",
       "location": "Medellín, Colombia",
-      "summary": "Frontend development for large-scale products using React and TypeScript. Keywords: React, TypeScript, JavaScript, HTML, CSS, Migration, Agile, Large-scale applications.",
+      "summary": "Frontend development for large‑scale products using React and TypeScript.",
       "highlights": [
         "Tech stack: React, TypeScript, JavaScript, HTML, CSS.",
-        "Contributed to the migration of an insurance application, delivering features using React and TypeScript.",
+        "Contributed to an insurance application migration, delivering features using React and TypeScript.",
         "Worked in distributed agile teams and large-scale codebases."
       ]
     },
@@ -65,7 +65,7 @@
       "startDate": "2018-10-01",
       "endDate": "2021-03-01",
       "location": "Medellín, Colombia",
-      "summary": "Test automation for web, mobile, and services using Selenium, Appium, Rest Assured, Cucumber, and Java (AS400). Keywords: Selenium, Appium, Rest Assured, Cucumber, Java, AS400, Test Automation, QA Strategy, Leadership.",
+      "summary": "Test automation for web, mobile, and services using Selenium, Appium, Rest Assured, Cucumber, and Java (AS400).",
       "highlights": [
         "Tech stack: Selenium, Appium, Rest Assured, Cucumber, Java, AS400.",
         "Led testing teams and defined test automation strategies.",
@@ -138,14 +138,22 @@
         "Micro-Frontend Architecture",
         "Design Systems",
         "Component Libraries",
+        "System Design",
         "Agile",
         "AI-Assisted Development"
+      ]
+    },
+    {
+      "name": "Tools",
+      "keywords": [
+        "Git",
+        "GitHub"
       ]
     }
   ],
   "education": [
     {
-      "institution": "Institucion Universitaria de Envigado",
+      "institution": "Institución Universitaria de Envigado",
       "area": "Systems Engineering",
       "studyType": "Bachelor's Degree",
       "startDate": "2013-10-01",
@@ -153,7 +161,7 @@
       "location": "Envigado, Colombia"
     },
     {
-      "institution": "Institucion Universitaria de Envigado",
+      "institution": "Institución Universitaria de Envigado",
       "area": "Project Management",
       "studyType": "Diploma",
       "startDate": "2017-06-01",
