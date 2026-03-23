@@ -16,6 +16,9 @@ Concise contributor guide for maintaining a JSON Resume–based CV. Use the npm 
 - `npm run export:html -- --lang=en --template=frontend --name=cv`: export HTML.
 - `npm run export:pdf -- --lang=en --template=frontend --name=cv`: export PDF.
 - `npm run export -- --lang=en --template=frontend --type=all --name=cv`: export both.
+- `npm run ats:check`: run ATS checker (JSON default).
+- `npm run ats:check -- --pdf=output/pdf/cv.pdf`: run ATS checker on PDF.
+- `npm run ats:check -- --job-text=job.txt`: run ATS checker with job match.
 Example workflow: `npm run validate -- --lang=en --template=frontend && npm run export:html -- --lang=en --template=frontend --name=cv` to preview locally.
 
 ## Coding Style & Naming Conventions

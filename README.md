@@ -4,8 +4,10 @@ CV versioned using the JSON Resume schema.
 
 ## Requirements
 
-- Node.js 12-18 (recommended by `resume-cli`)
+- Node.js 18+ (needed for `ats:check --job-url`; Node 20.12+ adds colored output)
 - npm
+
+Note: `resume-cli` recommends Node 12-18; using Node 18 keeps compatibility.
 
 ## Usage
 
@@ -45,6 +47,32 @@ Generate both formats:
 npm run export -- --lang=en --template=frontend --type=all --name=cv
 ```
 
+Run ATS checker (score + issues):
+
+```
+npm run ats:check
+```
+
+Note: Make sure `npm install` has been run so `pdf-parse` is available.
+
+ATS checker with PDF:
+
+```
+npm run ats:check -- --pdf=output/pdf/cv.pdf
+```
+
+ATS checker with job match (URL):
+
+```
+npm run ats:check -- --job-url=https://example.com/job
+```
+
+ATS checker with job match (text file):
+
+```
+npm run ats:check -- --job-text=./job.txt
+```
+
 Additional examples:
 
 Validate a specific file with custom language/template:
@@ -82,6 +110,7 @@ Full workflow example:
 - `output/pdf/<name>.pdf`: PDF export
 - `scripts/export.js`: Exporter with flags
 - `scripts/validate.js`: Validator with flags
+- `scripts/ats-check.js`: ATS checker with scoring + match
 - `themes/jsonresume-theme-miprofessional/`: Local theme
 
 ## Forking and Cloning the Repo
@@ -109,7 +138,7 @@ To modify your CV:
 
 ## Understanding Scripts
 
-The project uses two main scripts:
+The project uses three main scripts:
 
 ### validate.js
 Validates JSON files against the JSON Resume schema using `resume-cli`:
@@ -124,6 +153,12 @@ Exports validated JSON to HTML or PDF:
 - `--type` can be `html`, `pdf`, or `all`
 - Uses the local theme in `themes/jsonresume-theme-miprofessional/`
 - Outputs to `output/html/<name>.html` and/or `output/pdf/<name>.pdf`
+
+### ats-check.js
+Scores ATS compatibility and optional job matching:
+- Takes `--json` or `--pdf` (defaults to `input/<lang>/resume.<template>.ats.json`)
+- Optional `--job-url` or `--job-text` for vacancy matching
+- Prints score, issues, and keyword overlap
 
 ## Troubleshooting
 
@@ -141,11 +176,15 @@ Exports validated JSON to HTML or PDF:
 
 3. **Node version warnings**
    - Cause: Using Node.js 20+ with resume-cli
-   - Solution: Use Node.js 12-18 as recommended, or ignore warnings if functionality works
+   - Solution: Use Node.js 18 for compatibility, or ignore warnings if functionality works
 
 4. **Missing theme errors**
    - Cause: Theme not properly installed or referenced
    - Solution: Ensure `themes/jsonresume-theme-miprofessional/` exists and is correctly referenced in package.json
+
+5. **ATS checker with job URLs returns low score**
+   - Cause: Some sites inject extra markup and unrelated text
+   - Solution: Use `--job-text` with the cleaned job description
 
 ### Getting Help
 If you encounter issues not covered here:

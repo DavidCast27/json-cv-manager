@@ -7,7 +7,8 @@
     "export:pdf": "node scripts/export.js --type=pdf",
     "export:html": "node scripts/export.js --type=html",
     "validate": "node scripts/validate.js",
-    "validate:all": "node scripts/validate-all.js"
+    "validate:all": "node scripts/validate-all.js",
+    "ats:check": "node scripts/ats-check.js"
   },
   "keywords": [
     "jsonresume",
@@ -21,6 +22,7 @@
     "resume-cli": "^3.1.2"
   },
   "dependencies": {
-    "jsonresume-theme-miprofessional": "file:themes/jsonresume-theme-miprofessional"
+    "jsonresume-theme-miprofessional": "file:themes/jsonresume-theme-miprofessional",
+    "pdf-parse": "^1.1.1"
   }
 }
