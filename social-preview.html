@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON CV Manager - Ultra Realistic Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+            --accent-blue: #38bdf8;
+            --accent-green: #22c55e;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-secondary: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: var(--text-main);
+        }
+
+        .container {
+            width: 1250px;
+            height: 700px;
+            display: flex;
+            position: relative;
+            gap: 25px;
+            padding: 40px;
+        }
+
+        /* Editor Side (VS Code Style) */
+        .editor {
+            flex: 1.3;
+            background: #1e1e1e;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .editor-header {
+            background: #252526;
+            padding: 10px 16px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            border-bottom: 1px solid #2d2d2d;
+        }
+
+        .dot { width: 11px; height: 11px; border-radius: 50%; }
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27c93f; }
+        .editor-title { color: #969696; font-size: 11px; margin-left: 10px; font-family: 'Fira Code'; opacity: 0.8; }
+
+        .editor-content {
+            padding: 20px;
+            font-family: 'Fira Code', monospace;
+            font-size: 11.5px;
+            line-height: 1.4;
+            color: #d4d4d4;
+            flex-grow: 1;
+        }
+
+        .key { color: #9cdcfe; }
+        .string { color: #ce9178; }
+        .bracket { color: #ffd700; }
+        .number { color: #b5cea8; }
+        .indent { margin-left: 18px; display: inline-block; border-left: 1px solid #333; padding-left: 10px; }
+
+        /* Terminal block at the bottom of editor */
+        .terminal-block {
+            background: #181818;
+            border-top: 1px solid #333;
+            padding: 12px 20px;
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: #ccc;
+        }
+        .prompt { color: var(--accent-green); font-weight: bold; }
+        .cmd { color: #fff; }
+
+        /* CV Preview Side (Real Paper Feel) */
+        .preview-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .cv-paper {
+            width: 100%;
+            height: 580px;
+            background: white;
+            color: #000;
+            padding: 30px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            transform: perspective(1200px) rotateY(-2deg) scale(1.02);
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 9.5px;
+            line-height: 1.25;
+            position: relative;
+        }
+
+        /* Themed Content (miprofessional style) */
+        .cv-header { text-align: center; margin-bottom: 15px; border-bottom: 1px solid #000; padding-bottom: 10px; }
+        .cv-name { font-size: 20px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+        .cv-label { font-size: 11px; color: #333; margin-top: 4px; }
+        .cv-contact { font-size: 8.5px; margin-top: 6px; color: #555; }
+
+        .cv-section-title { 
+            font-size: 11px; font-weight: 700; text-transform: uppercase; 
+            border-bottom: 1px solid #ccc; margin: 15px 0 8px 0; padding-bottom: 3px; 
+            display: block;
+        }
+        
+        .cv-item { margin-bottom: 10px; }
+        .cv-item-header { display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 2px; }
+        .cv-item-sub { display: flex; justify-content: space-between; font-size: 9px; margin-bottom: 3px; font-style: italic; }
+        .cv-item-summary { margin-bottom: 4px; color: #222; font-size: 9px; }
+        .cv-list { margin-left: 15px; }
+        .cv-list li { margin-bottom: 2px; }
+
+        /* Floating Stats/Badges */
+        .stats-overlay {
+            position: absolute;
+            top: 20px;
+            right: -10px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 20;
+        }
+
+        .stat-badge {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-color);
+            padding: 10px 18px;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stat-badge.green { border-left: 4px solid var(--accent-green); }
+        .stat-badge.blue { border-left: 4px solid var(--accent-blue); }
+
+        .stat-val { font-weight: 800; font-size: 16px; color: #fff; }
+        .stat-lbl { font-size: 10px; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; }
+
+        .main-tagline {
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 26px;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+        }
+
+        .connector {
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            filter: drop-shadow(0 0 10px var(--accent-blue));
+        }
+
+        .highlight-box {
+            position: absolute;
+            border: 2px solid var(--accent-blue);
+            background: rgba(56, 189, 248, 0.05);
+            pointer-events: none;
+            border-radius: 4px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Expanded Editor Side -->
+        <div class="editor">
+            <div class="editor-header">
+                <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+                <span class="editor-title">input/en/resume.frontend.ats.json</span>
+            </div>
+            <div class="editor-content">
+                <span class="bracket">{</span><br>
+                &nbsp;&nbsp;<span class="key">"basics"</span>: <span class="bracket">{</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name"</span>: <span class="string">"David Castrillón Gonzales"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"label"</span>: <span class="string">"Senior Frontend Engineer"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"summary"</span>: <span class="string">"Frontend architecture expert..."</span><br>
+                &nbsp;&nbsp;<span class="bracket">}</span>,<br>
+                &nbsp;&nbsp;<span class="key">"work"</span>: <span class="bracket">[</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="bracket">{</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name"</span>: <span class="string">"Yuno"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"position"</span>: <span class="string">"Senior Frontend Engineer"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"highlights"</span>: <span class="bracket">[</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Built microfrontend architecture"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Implemented SSR with Remix/Router v7"</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="bracket">]</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="bracket">}</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="bracket">{</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name"</span>: <span class="string">"Conekta"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"position"</span>: <span class="string">"Senior Frontend Developer"</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="bracket">}</span><br>
+                &nbsp;&nbsp;<span class="bracket">]</span>,<br>
+                &nbsp;&nbsp;<span class="key">"skills"</span>: <span class="bracket">[</span> <span class="bracket">{</span> <span class="key">"name"</span>: <span class="string">"Frontend"</span>, <span class="key">"keywords"</span>: <span class="bracket">[</span><span class="string">"React"</span>, <span class="string">"TS"</span><span class="bracket">]</span> <span class="bracket">}</span> <span class="bracket">]</span><br>
+                <span class="bracket">}</span>
+            </div>
+            <div class="terminal-block">
+                <span class="prompt">david@macbook:~/json-cv-manager$</span> <span class="cmd">npm run export -- --lang=en --template=frontend</span><br>
+                <span style="opacity: 0.7">Validating JSON Resume... OK</span><br>
+                <span style="color: var(--accent-blue)">Generating PDF: output/pdf/cv-david-castrillon.pdf</span>
+            </div>
+        </div>
+
+        <div class="connector">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 5L20 12L13 19M4 12H20" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <!-- Populated CV Side -->
+        <div class="preview-side">
+            <div class="cv-paper">
+                <div class="cv-header">
+                    <div class="cv-name">David Castrillón Gonzales</div>
+                    <div class="cv-label">Senior Frontend Engineer (React, TypeScript, SSR, Microfrontends)</div>
+                    <div class="cv-contact">david.cast27@gmail.com | +57 3003467341 | castri.dev | Medellín, CO</div>
+                </div>
+                
+                <div class="cv-section-title">Professional Experience</div>
+                
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <span>Senior Frontend Engineer</span>
+                        <span style="font-weight: 400">2024-10 — Present</span>
+                    </div>
+                    <div class="cv-item-sub">
+                        <span>Yuno</span>
+                        <span>Medellín, Colombia</span>
+                    </div>
+                    <div class="cv-item-summary">Built a reconciliation microfrontend architecture using React, TypeScript, React Query, and Vite-based microfrontends.</div>
+                    <ul class="cv-list">
+                        <li>Established the architecture for a company-wide Backoffice SSR platform using React Router v7.</li>
+                        <li>Applied AI-assisted workflows to improve engineering productivity and delivery speed.</li>
+                    </ul>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <span>Senior Frontend Developer</span>
+                        <span style="font-weight: 400">2021-08 — 2024-09</span>
+                    </div>
+                    <div class="cv-item-sub">
+                        <span>Conekta</span>
+                        <span>Remote</span>
+                    </div>
+                    <div class="cv-item-summary">Back-office product development collaborating with Go and Node.js backends.</div>
+                </div>
+
+                <div class="cv-section-title">Technical Skills</div>
+                <div style="font-size: 9px; margin-bottom: 5px;">
+                    <strong>Frontend:</strong> React, TypeScript, Vite, Microfrontends, SSR, Remix, Tailwind CSS, ShadCN UI.<br>
+                    <strong>Testing & Tools:</strong> Vitest, Jest, Testing Library, Playwright, Git, CI/CD, AI Assisted Dev.
+                </div>
+
+                <div class="cv-section-title">Education</div>
+                <div class="cv-item-header">
+                    <span>Engineering in Software Development</span>
+                    <span style="font-weight: 400">2014 — 2019</span>
+                </div>
+            </div>
+
+            <!-- Stats Overlays -->
+            <div class="stats-overlay">
+                <div class="stat-badge green">
+                    <div style="display: flex; flex-direction: column;">
+                        <span class="stat-val">95/100</span>
+                        <span class="stat-lbl">ATS SCORE</span>
+                    </div>
+                    <svg width="24" height="24" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                </div>
+                <div class="stat-badge blue">
+                    <div style="display: flex; flex-direction: column;">
+                        <span class="stat-val">PDF / HTML</span>
+                        <span class="stat-lbl">Output Formats</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-tagline">MANEJÁ TU CV COMO CÓDIGO</div>
+    </div>
+</body>
+</html>
